@@ -25,10 +25,19 @@ scissors = '''
 '''
 choiceimg = [rock, paper, scissors]
 userinput = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
-if userinput >= 0 and userinput <= 3:
+if userinput >= 0 and userinput <= 2:
     print(choiceimg[userinput])
-if userinput > 3 and userinput < 0:
-    print("The entered choice is invalid!")
 computer = random.randint(0,2)
-if computer > userinput:
-    print("The computer won")
+print("The computer chose:\n", choiceimg[computer])
+if userinput >= 3 or userinput < 0:
+    print("The entered choice is invalid!")
+elif computer==1 and userinput==0:
+    print("The computer won!")
+elif computer==2 and userinput==1:
+    print("The computer won!")
+elif computer==0 and userinput==2:
+    print("The computer won!")
+elif computer==userinput:
+    print("Its a draw!")
+else:
+    print("The user won!")
