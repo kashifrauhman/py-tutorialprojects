@@ -20,3 +20,8 @@ for i in range(0, nr_numbers):
 random.shuffle(pass_list)
 
 print(pass_list)
+
+pas = ""
+for i in pass_list:
+    pas += i
+print(pas)
