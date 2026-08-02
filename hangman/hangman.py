@@ -5,8 +5,23 @@ word = random.choice(word_list)
 
 guess = input("Guess a letter from the word: ").lower()
 
+wordLength = len(word)
+print(wordLength)
+
+placeholder = ""
+
+for dash in range(0, wordLength):
+    placeholder = placeholder + "_"
+
+print(placeholder)
+
+display = ""
+
+
 for i in word:
     if i == guess:
-        print("Right")
+        display += guess
     else:
-        print("Wrong")
+        display += "_"
+
+print(display)
